@@ -22,7 +22,7 @@ make client
 ./bin/client -url https://codepen.io
 ```
 
-## TODO
-[ ] Implement for http method POST
-[ ] Implement for http method PATCH
-[ ] Implement for http method DELETE
+### Todo
+- [ ] Implement for http method POST
+- [ ] Implement for http method PATCH
+- [ ] Implement for http method DELETE
