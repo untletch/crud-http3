@@ -18,16 +18,24 @@ func PrintResponseRequestHeaders(req *http.Request, resp *http.Response) {
 	fmt.Printf("%s\n", red("Response Headers"))
 	fmt.Printf("%s %s\n", blue(resp.Proto), blue(resp.Status))
 
-	for key, value := range resp.Header {
-		fmt.Printf("%s: %s\n", cyan(key), yellow(value))
+	for key, values := range resp.Header {
+		fmt.Printf("%s: ", cyan(key))
+		for _, value := range values {
+			fmt.Printf("%s", yellow(value))
+		}
+		fmt.Println()
 	}
 
 	fmt.Println()
 	fmt.Printf("%s\n", red("Request Headers"))
 	fmt.Printf("%s\n", blue(req.Proto))
 
-	for key, value := range req.Header {
-		fmt.Printf("%s: %s\n", cyan(key), yellow(value))
+	for key, values := range req.Header {
+		fmt.Printf("%s: ", cyan(key))
+		for _, value := range values {
+			fmt.Printf("%s", yellow(value))
+		}
+		fmt.Println()
 	}
 	fmt.Println()
 }
