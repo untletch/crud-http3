@@ -46,4 +46,5 @@ func PrintResponseBody(respBody io.ReadCloser) {
 		fmt.Println("error copying body to stdout:", err)
 		return
 	}
+	fmt.Println()
 }
